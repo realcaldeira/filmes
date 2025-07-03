@@ -114,7 +114,7 @@ function App() {
         <>
           <header className="app-header">
             <h1>🎬 Movie Search</h1>
-            <p>Busque por seus filmes e séries favoritos</p>
+            <p>Busque por seus filmes e series favoritos</p>
           </header>
 
           <SearchForm onSearch={(filters) => handleSearch(filters, 1)} loading={loading} />
@@ -150,7 +150,7 @@ function App() {
                 <p>
                   {isSearchActive ? 'Resultados da busca: ' : 'Todos os filmes: '} 
                   {totalResults} resultado(s) 
-                  {currentPage > 1 && ` - Página ${currentPage}`}
+                  {currentPage > 1 && ` - Pagina ${currentPage}`}
                 </p>
               </div>
 
@@ -170,14 +170,14 @@ function App() {
                     ← Anterior
                   </button>
                   
-                  <span className="page-info">Página {currentPage}</span>
+                  <span className="page-info">Pagina {currentPage}</span>
                   
                   <button 
                     onClick={handleNextPage} 
                     disabled={!hasNextPage || loading}
                     className="pagination-button"
                   >
-                    Próxima →
+                    Proxima →
                   </button>
                 </div>
               )}
@@ -214,11 +214,11 @@ function App() {
                   <span className="year">{selectedMovie.Year}</span>
                   <span className="rated">{selectedMovie.Rated}</span>
                   <span className="runtime">{selectedMovie.Runtime}</span>
-                  <span className="type">{selectedMovie.Type === 'movie' ? 'Filme' : 'Série'}</span>
+                  <span className="type">{selectedMovie.Type === 'movie' ? 'Filme' : 'Serie'}</span>
                 </div>
                 
                 <div className="genre">
-                  <strong>Gênero:</strong> {selectedMovie.Genre}
+                  <strong>Genero:</strong> {selectedMovie.Genre}
                 </div>
                 
                 <div className="plot">
@@ -250,11 +250,11 @@ function App() {
                 </div>
                 
                 <div className="additional-info">
-                  <div><strong>Lançamento:</strong> {selectedMovie.Released}</div>
-                  <div><strong>País:</strong> {selectedMovie.Country}</div>
+                  <div><strong>Lancamento:</strong> {selectedMovie.Released}</div>
+                  <div><strong>Pais:</strong> {selectedMovie.Country}</div>
                   <div><strong>Idioma:</strong> {selectedMovie.Language}</div>
                   {selectedMovie.Awards && selectedMovie.Awards !== 'N/A' && (
-                    <div><strong>Prêmios:</strong> {selectedMovie.Awards}</div>
+                    <div><strong>Premios:</strong> {selectedMovie.Awards}</div>
                   )}
                   {selectedMovie.BoxOffice && selectedMovie.BoxOffice !== 'N/A' && (
                     <div><strong>Bilheteria:</strong> {selectedMovie.BoxOffice}</div>
@@ -264,7 +264,7 @@ function App() {
             </div>
           ) : (
             <div className="error">
-              <p>Filme não encontrado</p>
+              <p>Filme nao encontrado</p>
             </div>
           )}
         </div>

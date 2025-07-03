@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { SearchFilters } from '..          </select>
-        </div>pes';
+import { SearchFilters } from '../types';
 
 interface SearchFormProps {
   onSearch: (filters: SearchFilters) => void;
@@ -39,11 +38,11 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch, loading }) => {
     <form onSubmit={handleSubmit} className="search-form">
       <div className="search-group">
         <div className="input-wrapper">
-          <label htmlFor="title">Título do Filme</label>
+          <label htmlFor="title">Titulo do Filme</label>
           <input
             id="title"
             type="text"
-            placeholder="Digite o título do filme..."
+            placeholder="Digite o titulo do filme..."
             value={filters.title}
             onChange={(e) => handleInputChange('title', e.target.value)}
             className="search-input"
@@ -73,7 +72,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch, loading }) => {
           >
             <option value="">Todos</option>
             <option value="movie">Filmes</option>
-            <option value="series">Séries</option>
+            <option value="series">Series</option>
           </select>
           <span className="select-icon">�</span>
         </div>

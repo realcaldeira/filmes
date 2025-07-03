@@ -38,7 +38,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch, loading }) => {
     <form onSubmit={handleSubmit} className="search-form">
       <div className="search-group">
         <div className="input-wrapper">
-          <label htmlFor="title">Título do Filme</label>
+          <label htmlFor="title">Titulo do Filme</label>
           <input
             id="title"
             type="text"

@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
     <div className="home-page">
       <header className="app-header">
         <h1>🎬 Movie Search</h1>
-        <p>Busque por seus filmes e séries favoritos</p>
+        <p>Busque por seus filmes e series favoritos</p>
       </header>
 
       <SearchForm onSearch={(filters) => handleSearch(filters, 1)} loading={loading} />
@@ -70,7 +70,7 @@ const HomePage: React.FC = () => {
           <div className="results-info">
             <p>
               Encontrados {totalResults} resultado(s) 
-              {currentPage > 1 && ` - Página ${currentPage}`}
+              {currentPage > 1 && ` - Pagina ${currentPage}`}
             </p>
           </div>
 
@@ -90,14 +90,14 @@ const HomePage: React.FC = () => {
                 ← Anterior
               </button>
               
-              <span className="page-info">Página {currentPage}</span>
+              <span className="page-info">Pagina {currentPage}</span>
               
               <button 
                 onClick={handleNextPage} 
                 disabled={!hasNextPage || loading}
                 className="pagination-button"
               >
-                Próxima →
+                Proxima →
               </button>
             </div>
           )}

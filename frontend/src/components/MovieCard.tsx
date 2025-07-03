@@ -18,7 +18,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, onClick }) => {
           <img src={movie.Poster} alt={movie.Title} />
         ) : (
           <div className="no-poster">
-            <span>Sem imagem disponível</span>
+            <span>Sem imagem disponivel</span>
           </div>
         )}
       </div>
@@ -27,7 +27,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, onClick }) => {
         <div className="movie-details">
           <span className="movie-year">{movie.Year}</span>
           <span className="movie-type">
-            {movie.Type === 'movie' ? '🎬 Filme' : '📺 Série'}
+            {movie.Type === 'movie' ? 'Filme' : 'Serie'}
           </span>
         </div>
       </div>
