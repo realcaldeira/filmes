@@ -1,8 +1,8 @@
 import { SearchResponse, MovieDetail, SearchFilters } from '../types';
 
-const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? '/api' 
-  : 'http://localhost:8080/api';
+const API_BASE_URL = window.location.hostname === 'localhost' && window.location.port === '3000'
+  ? 'http://localhost:8080/api'
+  : '/api';
 
 export const movieService = {
   async searchMovies(filters: SearchFilters, page: number = 1): Promise<SearchResponse> {
